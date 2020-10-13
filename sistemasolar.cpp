@@ -1,7 +1,7 @@
 /*
 
 Nombre del archivo: main.cpp
-Contenido: Sistema solar 
+Contenido: Sistema solar
 Autor: Leidy Johana Rivera - 2024011-3743
 
 */
@@ -21,9 +21,6 @@ Include librerías necesarias
 using namespace std;
 
 #define PI 3.1415926
-float x, y;
-float angulo = 0.0f;
-GLfloat left, right, up, down = 0.1;
 
 void reshape(int width, int height) {
     glViewport(0, 0, width, height);
@@ -38,12 +35,12 @@ void reshape(int width, int height) {
 void display(void) {
     glClearColor(0.0, 0.0, 0.0, 0.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glPushMatrix(); 
+    glPushMatrix();
     glColor3f(1.0, 1.0, 0.0);
     glTranslatef(0.0, 0.0, 0.0);
     glutSolidSphere(0.2, 100, 100); /* Sol */
     glPopMatrix();
-    glPushMatrix();	
+    glPushMatrix();
     glColor3f(1.0, 1.0, 1.0);
     glPushMatrix();
 
@@ -150,7 +147,7 @@ void display(void) {
     glutSolidSphere(0.09, 100, 100);
     glPopMatrix();
 
-    
+
     glutSwapBuffers();
 }
 
